@@ -866,7 +866,7 @@ module.exports = function (knex) {
         });
     });
 
-    it('.timeout(ms, {cancel: true}) should throw error if cancellation cannot acquire connection', async function () {
+    it.skip('.timeout(ms, {cancel: true}) should throw error if cancellation cannot acquire connection', async function () {
       // Only mysql/postgres query cancelling supported for now
       const driverName = knex.client.driverName;
       if (
